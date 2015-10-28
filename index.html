@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://v3.bootcss.com/getting-started/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="API test tool">
+<meta name="author" content="TRons">
+
+<title>
+  
+    API test tool
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<style class="anchorjs"></style><link href="./public/bootstrap.min.css" rel="stylesheet">
+
+<link href="./public/patch.css" rel="stylesheet">
+<link href="./public/style.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+
+<link href="./public/docs.min.css" rel="stylesheet">
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="./public/ie-emulation-modes-warning.js"></script><style type="text/css" adt="123"></style>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <body>
+ 
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a>API</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a>TRons</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content" tabindex="-1">
+      <div class="container">
+        <h1>API test tool</h1>
+        <p>方便测试各种HTTP请求,采用ajax</p>
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <div class="bs-docs-section">
+              <form>
+                  <div class="form-group col-md-2">
+                    <label>请求方式</label>
+                    <select class="form-control" id="method">
+                      <option>GET</option>
+                      <option>POST</option>
+                      <option>PUT</option>
+                      <option>DELETE</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-8">
+                    <label>请求url</label>
+                    <input type="url" class="form-control" id="url" placeholder="Please input your url">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <input type="button" class="btn btn-success" id="submit" value="发送请求">
+                  </div>
+                  <table class="table table-bordered" id="data">
+                    <thead>
+                        <tr>
+                        <td>参数名</td>
+                        <td>参数值</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody id="tb_params">
+                        <tr class="params">
+                            <td>
+                                <input class="form-control key" type="text">
+                            </td>
+                            <td>
+                                <input class="form-control value" type="text">
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-danger delete" value="删除">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" >
+                                <input type="button" class="btn btn-primary btn-block" id="add" value="增加">
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </form>
+                <table class="table table-bordered col-md-12" id="data">
+                    <thead>
+                        <tr>
+                        <td>Header</td>
+                        <td>reponse</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="header"></td>
+                            <td id="response"></td>
+                        </tr>
+                    </tbody>
+                  </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+
+    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
+    <p>Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护。</p>
+    <ul class="bs-docs-footer-links text-muted">
+      <li>当前版本： v3.3.5</li>
+      <li>·</li>
+      <li><a href="https://github.com/twbs/bootstrap">GitHub 仓库</a></li>
+      <li>·</li>
+      <li><a href="http://v3.bootcss.com/getting-started/#examples">实例精选</a></li>
+      <li>·</li>
+      <li><a href="http://v2.bootcss.com/">v2.3.2 中文文档</a></li>
+      <li>·</li>
+      <li><a href="http://v3.bootcss.com/about/">关于</a></li>
+      <li>·</li>
+      <li><a href="http://expo.bootcss.com/">优站精选</a></li>
+      <li>·</li>
+      <li><a href="http://blog.getbootstrap.com/">官方博客</a></li>
+      <li>·</li>
+      <li><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+      <li>·</li>
+      <li><a href="https://github.com/twbs/bootstrap/releases">历史版本</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./public/jquery.min.js"></script>
+<script src="./public/ajax.js"></script>
+
+
+  <script src="./public/bootstrap.min.js"></script>
+
+
+
+  <script src="./public/docs.min.js"></script>
+
+
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./public/ie10-viewport-bug-workaround.js"></script>
